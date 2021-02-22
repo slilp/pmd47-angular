@@ -1,0 +1,8 @@
+
+
+<div class="container">
+  <p *ngFor="let item of listNumber">
+    <span *ngIf="item % 2 === 0" class="number-even">{{ item }} is even number</span>
+    <span *ngIf="item % 2 !== 0" class="number-odd">{{ item }} is odd number</span>
+  </p>
+</div>
