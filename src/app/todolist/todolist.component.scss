@@ -1,0 +1,21 @@
+
+.btn{
+    padding: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 1rem;
+    &:hover{
+     cursor: pointer;
+    }
+}
+
+.delete-btn{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: red;
+    color: white;
+    margin: 1rem;
+    &:hover{
+     cursor: pointer;
+    }
+}
