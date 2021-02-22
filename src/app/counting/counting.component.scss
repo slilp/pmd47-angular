@@ -1,0 +1,20 @@
+
+.span-success{
+    color:green;
+    font-weight: bold;
+}
+
+.btn-success{
+    background-color: green;
+    padding: 1rem;
+    color: white;
+    font-size: 1rem;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.content{
+    margin: auto;
+    width: 50%;
+}
