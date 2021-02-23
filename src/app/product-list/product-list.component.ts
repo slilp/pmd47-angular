@@ -28,4 +28,8 @@ export class ProductListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  selectedProduct(product:Product){
+    alert(`You select ${product.name}`);
+  }
+
 }

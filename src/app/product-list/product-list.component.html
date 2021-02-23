@@ -1,3 +1,6 @@
 
 
-<app-product-item *ngFor="let item of products" [product]="item"></app-product-item>
+<app-product-item *ngFor="let item of products" [product]="item"
+(OnSelected)="selectedProduct($event)"
+>
+</app-product-item>

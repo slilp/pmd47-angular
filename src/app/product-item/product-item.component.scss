@@ -4,3 +4,10 @@
     border: 1px solid gray;
     text-align: center;
 }
+
+.btn-select{
+    margin: 1rem;
+    &:hover{
+        cursor: pointer;
+    }
+}
