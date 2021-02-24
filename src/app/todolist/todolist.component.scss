@@ -1,21 +1,25 @@
 
 .btn{
     padding: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
     margin: 1rem;
     &:hover{
      cursor: pointer;
     }
+    background-color: rgb(18, 18, 131);
+    color: white;
 }
 
-.delete-btn{
-    padding-left: 1rem;
-    padding-right: 1rem;
-    background-color: red;
-    color: white;
+.card{
+    padding: 0.5rem;
+    border: 0.5px solid black;
+    width: 30rem;
+    margin: auto;
+}
+
+.add-section{
+    border: 0.5px solid black;
     margin: 1rem;
-    &:hover{
-     cursor: pointer;
-    }
+    padding: 0.5rem;
 }

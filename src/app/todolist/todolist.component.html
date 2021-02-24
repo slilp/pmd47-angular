@@ -1,12 +1,18 @@
 
-<h1>My Tasks today</h1>
-<ul>
-    <li *ngFor="let item of listTodo; let i = index" [attr.data-index]="i">
-        {{item}} <button class="delete-btn" (click)="deleteTodo(i)">delete</button> 
-    </li>    
-</ul>
+<div class="card">
+    <h2>ToDoListComponent</h2>
+    <app-task *ngFor="let item of listTask" [task]="item" 
+    (OnSelected)="SelectedTask($event)"
+    ></app-task>
 
-<h1>Task</h1>
-<input [(ngModel)]="todo">
-<button class="btn" (click)="addTodo()"> Add</button>
+
+    <div class="add-section">
+        <h2>Add task</h2>
+        <span>Name :         </span> <input [(ngModel)]="name">
+        <br>   <br>
+        <span>Description : </span><input [(ngModel)]="desc">
+        <br>
+        <button class="btn" (click)="addTodo()"> Add</button> 
+    </div>
+</div>
 
