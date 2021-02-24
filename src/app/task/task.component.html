@@ -1,11 +1,11 @@
 
 
-<div class="box">
+<div (click)="select()" class="box" [class.select-task]="isSelected">
     <div>
         <h3>{{task.id+1}} {{task.name}}</h3>
-        <p>{{task.description}}</p>
+        <!-- <p>{{task.description}}</p> -->
     </div>
     <div>
-        <button class="delete-btn" (click)="select()"> Delete </button> 
+        <button class="delete-btn" (click)="remove()"> Delete </button> 
     </div>
 </div>

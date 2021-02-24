@@ -3,8 +3,15 @@
     <h2>ToDoListComponent</h2>
     <app-task *ngFor="let item of listTask" [task]="item" 
     (OnSelected)="SelectedTask($event)"
+    (OnRemove)="DeletedTask($event)"
     ></app-task>
 
+    <div class="show-section">
+        <div>
+            <h3>Task : {{taskShow.name}}</h3>
+            <p>Description : {{taskShow.description}}</p>
+        </div>
+    </div>
 
     <div class="add-section">
         <h2>Add task</h2>
@@ -15,4 +22,5 @@
         <button class="btn" (click)="addTodo()"> Add</button> 
     </div>
 </div>
+
 
