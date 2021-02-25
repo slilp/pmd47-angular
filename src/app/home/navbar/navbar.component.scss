@@ -1,0 +1,21 @@
+.nav{
+    background-color: salmon;
+    height: 2.5rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+ul {
+    list-style-type: none;
+}
+  
+li {
+    float: left;
+}
+  
+li a {
+    display: block;
+    padding-left: 1rem;
+    color: white;
+    font-size: 2rem;
+}

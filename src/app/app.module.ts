@@ -1,12 +1,25 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {RouterModule,Routes} from '@angular/router';
 import { AppComponent } from './app.component';
 import {HomeComponent} from './home/home.component';
-// import { ProductListComponent } from './product-list/product-list.component';
-// import { ProductItemComponent } from './catalog/product-item/product-item.component';
 import {HomeModule} from './home/home.module';
 import {CatalogModule} from './catalog/catalog.module';
-import {BackendService} from './backend.service';
+
+const routes:Routes =  [
+  {
+    path : '',
+    component:HomeComponent
+  },
+  {
+    path:'home',
+    component:HomeComponent
+  },
+  {
+    path:'**',
+    component:HomeComponent
+  }
+];
 
 @NgModule({
   declarations: [
@@ -16,10 +29,13 @@ import {BackendService} from './backend.service';
   imports: [
     BrowserModule,
     HomeModule,
-    CatalogModule
+    CatalogModule,
+    RouterModule.forRoot(routes)
   ],
-  providers: [BackendService],
   bootstrap: [AppComponent]
 })
+
+
+
 
 export class AppModule { }
