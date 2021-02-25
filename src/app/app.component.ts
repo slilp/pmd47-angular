@@ -1,6 +1,6 @@
 import { Component , OnInit , ViewChild } from '@angular/core';
 import { ProductListComponent } from '../app/product-list/product-list.component';
-
+import {BackendService} from './backend.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,25 +8,14 @@ import { ProductListComponent } from '../app/product-list/product-list.component
 })
 export class AppComponent implements OnInit {
 
+  constructor(private backendService:BackendService){}
+
   @ViewChild('productList',{static:true}) productList:ProductListComponent;
 
   title = 'pmd47-angular';
 
   ngOnInit():void{
-    this.productList.products=[
-      {
-        name:"I-phone",
-        price:35000
-      },
-      {
-        name:"Samsung",
-        price:30000
-      },
-      {
-        name:"Huawei",
-        price:28000
-      } 
-    ];
+    this.productList.products= this.backendService.getProducts();
   }
 
 }
