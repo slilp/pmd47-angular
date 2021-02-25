@@ -1,5 +1,5 @@
 import { Component , OnInit , ViewChild } from '@angular/core';
-import { ProductListComponent } from '../app/product-list/product-list.component';
+import { ProductListComponent } from '../app/catalog/product-list/product-list.component';
 import {BackendService} from './backend.service';
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
 
   constructor(private backendService:BackendService){}
 
-  @ViewChild('productList',{static:true}) productList:ProductListComponent;
+  @ViewChild(ProductListComponent,{static:true}) productList:ProductListComponent;
 
   title = 'pmd47-angular';
 
